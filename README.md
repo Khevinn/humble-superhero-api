@@ -48,6 +48,12 @@ Once the project is running, access:
     
 http://localhost:3000/api
 
+## 🔗 Frontend Integration
+You can view the frontend project that integrates with this API in the following repository:
+
+Frontend Repository: https://github.com/Khevinn/humble-superheroes-front
+Make sure to run the frontend alongside this backend API to see the full application in action.
+
 ## 💡 How Would I Collaborate with a Teammate?
 - Code reviews: Share pull requests on GitHub to get feedback before merging.
 - Clear communication: Discuss improvements in daily meetings, using the SCRUM model for example.
