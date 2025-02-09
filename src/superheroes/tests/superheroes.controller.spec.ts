@@ -27,21 +27,21 @@ describe('SuperheroesController', () => {
   });
 
   describe('POST /superheroes', () => {
-    it('should create a new superhero', async () => {
+    it('should create a new superhero', () => {
       const superheroDto: SuperheroDto = {
         name: 'Spider-Man',
         superpower: 'Wall Climbing',
         humilityScore: 9,
       };
 
-      await controller.create(superheroDto);
+      controller.create(superheroDto);
 
       expect(service.create).toHaveBeenCalledWith(superheroDto);
     });
   });
 
   describe('GET /superheroes', () => {
-    it('should return a list of superheroes sorted by humility score', async () => {
+    it('should return a list of superheroes sorted by humility score', () => {
       const superheroes: Superhero[] = [
         { name: 'Spider-Man', superpower: 'Wall Climbing', humilityScore: 9 },
         {
@@ -53,7 +53,7 @@ describe('SuperheroesController', () => {
 
       jest.spyOn(service, 'findAll').mockResolvedValue(superheroes as never);
 
-      const result = await controller.findAll();
+      const result = controller.findAll();
 
       expect(result).toEqual(superheroes);
       expect(service.findAll).toHaveBeenCalled();

@@ -26,7 +26,7 @@ describe('SuperheroesService', () => {
   });
 
   describe('create', () => {
-    it('should create a new superhero', async () => {
+    it('should create a new superhero', () => {
       const superhero: Superhero = {
         name: 'Spider-Man',
         superpower: 'Wall Climbing',
@@ -35,7 +35,7 @@ describe('SuperheroesService', () => {
 
       jest.spyOn(repository, 'add').mockResolvedValue(superhero as never);
 
-      const result = await service.create(superhero);
+      const result = service.create(superhero);
 
       expect(repository.add).toHaveBeenCalledWith(superhero);
       expect(result).toEqual(superhero);
@@ -43,7 +43,7 @@ describe('SuperheroesService', () => {
   });
 
   describe('findAll', () => {
-    it('should return a list of superheroes', async () => {
+    it('should return a list of superheroes', () => {
       const superheroes: Superhero[] = [
         { name: 'Spider-Man', superpower: 'Wall Climbing', humilityScore: 9 },
         {
@@ -55,7 +55,7 @@ describe('SuperheroesService', () => {
 
       jest.spyOn(repository, 'getAll').mockResolvedValue(superheroes as never);
 
-      const result = await service.findAll();
+      const result = service.findAll();
 
       expect(repository.getAll).toHaveBeenCalled();
       expect(result).toEqual(superheroes);
