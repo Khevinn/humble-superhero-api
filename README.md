@@ -19,6 +19,9 @@ This API allows users to add superheroes and rank them based on their humility s
    npm install
    ```
 
+### ⚠️ Make sure to set the `PORT` variable in the `.env` file If not set, the application will run on port `3001` by default.    
+
+
 2. Start the server
 
 - Run normally (without auto-restart):
@@ -29,7 +32,7 @@ This API allows users to add superheroes and rank them based on their humility s
     ```sh
     npm run dev
     
-3. Access the API at http://localhost:3000
+3. Access the API at http://localhost:3001
 
 ## 🛠️ Testing
 
@@ -46,7 +49,7 @@ This API allows users to add superheroes and rank them based on their humility s
 ## 📜 API Swagger Documentation
 Once the project is running, access:
     
-http://localhost:3000/api
+http://localhost:3001/api
 
 ## 🔗 Frontend Integration
 You can view the frontend project that integrates with this API in the following repository:
